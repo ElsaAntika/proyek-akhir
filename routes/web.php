@@ -23,6 +23,11 @@ Route::get('/hello', function () {
 
 Route::get('person', 'PersonController@index');
 
-Route::get('/person/show/{param}', 'PersonController@show');
+// Route::get('/person/show/{param}', 'PersonController@show');
 
 Route::resource('Student', 'StudentController');
+
+Route::get('/person', 'PersonController@index');
+
+Route::get('/person/sendData', 'PersonController@sendData');
+
