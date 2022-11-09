@@ -27,7 +27,11 @@ Route::get('person', 'PersonController@index');
 
 Route::resource('Student', 'StudentController');
 
-Route::get('/person', 'PersonController@index');
+Route::get('/person', 'PersonController@index')->name('person.index');
 
 Route::get('/person/sendData', 'PersonController@sendData');
 
+Route::get('/person/create', 'PersonController@create')->name('person.create');
+
+Route::post('/person/store', 'PersonController@store')->name('person.store');
+Route::post('/person/save', 'PersonController@store')->name('person.save');
